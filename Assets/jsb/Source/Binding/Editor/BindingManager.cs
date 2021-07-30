@@ -1351,15 +1351,6 @@ namespace QuickJS.Binding
             OnPreCollectAssemblies();
             AddAssemblies(false, prefs.explicitAssemblies.ToArray());
             AddAssemblies(true, prefs.implicitAssemblies.ToArray());
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-            for (var i = 0; i < assemblies.Length; i++)
-            {
-                var assembly = assemblies[i];
-                if (!assembly.IsDynamic && !IsAssemblyBlocked(assembly))
-                {
-                    AddAssemblies(false, assembly.FullName);
-                }
-            }
             OnPostCollectAssemblies();
 
             OnPreExporting();
