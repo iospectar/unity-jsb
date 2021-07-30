@@ -6,7 +6,7 @@ using System.Reflection;
 namespace QuickJS.Unity
 {
     using Binding;
-    using Native;
+    using QuickJS.Native;
     using UnityEngine;
     using UnityEditor;
 
