@@ -1,0 +1,7 @@
+{
+  "name": "io.spectar.jsb",
+  "version": "0.0.1",
+  "displayName": "Unity JSB",
+  "description": "JavaScript Runtime",
+  "dependencies": {}
+}
