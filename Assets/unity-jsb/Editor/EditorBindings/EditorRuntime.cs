@@ -54,7 +54,8 @@ namespace QuickJS.Unity
         {
             _prefs = prefs;
             _runMode = RunMode.None;
-            ScriptEngine.RuntimeCreated += OnScriptRuntimeCreated;
+            // TODO: It'd be great to have an easy way to control this
+            // ScriptEngine.RuntimeCreated += OnScriptRuntimeCreated;
             EditorApplication.delayCall += OnInit;
             EditorApplication.update += OnUpdate;
             EditorApplication.quitting += OnQuitting;
