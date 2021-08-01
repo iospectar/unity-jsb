@@ -787,7 +787,7 @@ namespace QuickJS
                 }
                 else
                 {
-                    throw new UnexpectedException(fileName, "can not resolve file path");
+                      throw new UnexpectedException(fileName, "can not resolve file path");
                 }
             }
 
@@ -798,7 +798,7 @@ namespace QuickJS
         {
             return _mainThreadId == Thread.CurrentThread.ManagedThreadId;
         }
-
+ 
         // main loop
         public void Update(int ms)
         {

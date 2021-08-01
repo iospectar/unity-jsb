@@ -13,7 +13,7 @@ namespace QuickJS.Binding
         public PlainClassCodeGen(CodeGenerator cg, string name)
         {
             this.cg = cg;
-            this.cg.cs.AppendLine("public partial class {0}", name);
+            this.cg.cs.AppendLine("public partial class {0} : Values", name);
             this.cg.cs.AppendLine("{");
             this.cg.cs.AddTabLevel();
         }

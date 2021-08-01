@@ -14,6 +14,7 @@ namespace QuickJS.Binding
         public const string NameOfDelegates = "_QuickJSDelegates";
         public const string NameOfHotfixDelegates = "_QuickJSHotfixDelegates";
         public const string NameOfBindingList = "_QuickJSBindings";
+        public const string BindingListClass = "BindingList";
         public const string NamespaceOfScriptTypes = "QuickJS";
         public const string NamespaceOfInternalScriptTypes = "QuickJS.Internal";
         public const string NameOfBuffer = "ArrayBuffer";
@@ -61,7 +62,7 @@ namespace QuickJS.Binding
                     {
                         using (new CSNamespaceCodeGen(this, typeof(Values).Namespace))
                         {
-                            using (new PlainClassCodeGen(this, typeof(Values).Name))
+                            using (new PlainClassCodeGen(this, CodeGenerator.BindingListClass))
                             {
                                 using (new PreservedCodeGen(this))
                                 {
