@@ -34,6 +34,7 @@ namespace QuickJS.Unity
         static EditorRuntime()
         {
             var prefs = UnityHelper.LoadPrefs();
+            return;
             if (prefs.editorScripting)
             {
                 _instance = new EditorRuntime(prefs);

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 
 namespace QuickJS.Binding
@@ -16,7 +17,7 @@ namespace QuickJS.Binding
         }
 
         public static void StaticBind(ScriptRuntime runtime)
-        {
+        {   
             var logger = runtime.GetLogger();
             var bindAll = typeof(Binding.Values).GetMethod("BindAll", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
             if (bindAll == null)
